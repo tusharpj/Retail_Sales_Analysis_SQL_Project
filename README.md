@@ -1,5 +1,4 @@
 Retail Sales Analysis SQL Project
-
 Project Overview
 
 Project Title: Retail Sales Analysis
@@ -24,17 +23,17 @@ The project begins by creating a database and a retail_sales table.
 
 CREATE DATABASE p1_retail_db;
 
-CREATE TABLE retail_sales
+CREATE TABLE retail_sales 
 (
     transactions_id INT PRIMARY KEY,
-    sale_date DATE,	
+    sale_date DATE,
     sale_time TIME,
-    customer_id INT,	
+    customer_id INT,
     gender VARCHAR(10),
     age INT,
     category VARCHAR(35),
     quantity INT,
-    price_per_unit FLOAT,	
+    price_per_unit FLOAT,
     cogs FLOAT,
     total_sales FLOAT
 );
@@ -52,19 +51,29 @@ SELECT DISTINCT category FROM retail_sales;
 Null Value Check
 SELECT *
 FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+WHERE sale_date IS NULL 
+   OR sale_time IS NULL 
+   OR customer_id IS NULL 
+   OR gender IS NULL 
+   OR age IS NULL 
+   OR category IS NULL 
+   OR quantity IS NULL 
+   OR price_per_unit IS NULL 
+   OR cogs IS NULL;
 
 Delete Records With Null Values
 DELETE FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+WHERE sale_date IS NULL 
+   OR sale_time IS NULL 
+   OR customer_id IS NULL 
+   OR gender IS NULL 
+   OR age IS NULL 
+   OR category IS NULL 
+   OR quantity IS NULL 
+   OR price_per_unit IS NULL 
+   OR cogs IS NULL;
 
-3. Data Analysis & Business Queries
+Data Analysis & Business Queries
 
 Below are the 10 business SQL queries, rewritten using your exact queries.
 
@@ -168,9 +177,9 @@ Clothing and Beauty categories have high customer engagement.
 
 High-value transactions (sales > 1000) show premium customers.
 
-Shifts reveal busiest times of the day.
+Shift analysis reveals busiest time of the day.
 
-Top 5 customers contribute major revenue.
+Top 5 customers bring major revenue contribution.
 
 Conclusion
 
